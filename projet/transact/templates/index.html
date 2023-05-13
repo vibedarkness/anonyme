@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<div style="margin-top: 100px;" class="tableau">
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Somme</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for cli in client %}
+          
+       
+      <tr>
+        <th scope="row">{{ cli.id  }}</th>
+        <td>{{ cli.prenom  }}</td>
+        <td>{{ cli.nom  }}</td>
+        <td>{{ cli.adresse  }}</td>
+        <td>{{ cli.somme  }}</td>
+
+      </tr>
+
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</div>
+
+{% endblock main %}
